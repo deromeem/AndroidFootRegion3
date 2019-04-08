@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClubActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_club"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ClubActivity">
+
+        <!-- Etiquette date -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Nom :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur date -->
+        <TextView android:id="@+id/nom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette libelle -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Adr_rue :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur libelle -->
+        <TextView android:id="@+id/adr_rue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette discussion -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Sigle :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur discussion -->
+        <TextView android:id="@+id/sigle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Adr_ville :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/adr_ville"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Adr_cp :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/adr_cp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="emailDirecteur :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/emailDirecteur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="emailEntraineur :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/emailEntraineur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="emailJoueur :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/emailJoueur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="nomDirecteur :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/nomDirecteur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+        <!-- Etiquette email -->
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="prenomDirecteur :"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="10dip"
+            android:textSize="17dip"
+            android:textStyle="bold"/>
+
+        <!-- Valeur email -->
+        <TextView android:id="@+id/prenomDirecteur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"
+            android:singleLine="true"/>
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
