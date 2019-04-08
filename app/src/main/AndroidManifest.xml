@@ -22,9 +22,10 @@
         <activity android:name=".MesMessagesActivity" />
         <activity android:name=".JoueursActivity" />
         <activity android:name=".MessageActivity" />
+        <activity android:name=".MesMatchsActivity" />
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".MyPreferenceActivity"
             android:label="@string/title_mes_preferences" />
