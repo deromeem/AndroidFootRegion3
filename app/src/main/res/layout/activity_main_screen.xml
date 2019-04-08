@@ -39,7 +39,8 @@
         <Button android:id="@+id/btnViewMatchs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Matchs"/>
+            android:text="Matchs"
+            android:layout_marginTop="25dip"/>
 
             <!--  Bouton pour afficher la liste des MesClubs -->
         <Button android:id="@+id/btnViewMesClubs"

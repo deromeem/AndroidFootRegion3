@@ -72,6 +72,11 @@ public class MainScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getApplicationContext(), MesMatchsActivity.class);
+                in.putExtra(TAG_USER_LOGIN, userLogin);
+                in.putExtra(TAG_USER_PWD, userPwd);
+                startActivity(in);
+            }
+        });
 
         // événement de clic sur le bouton de visualisation des commandes
         btnViewMesClubs.setOnClickListener(new View.OnClickListener() {
