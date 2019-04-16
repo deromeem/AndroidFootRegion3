@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.lla_sio.androidfootregion"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="27" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="fr.lla_sio.androidfootregion.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="fr.lla_sio.androidfootregion.MainScreenActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MesMessagesActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.JoueursActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MessageActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MesMatchsActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MesClubsActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.ClubActivity" />
+        <activity
+            android:name="fr.lla_sio.androidfootregion.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="fr.lla_sio.androidfootregion.MyPreferenceActivity"
+            android:label="@string/title_mes_preferences" />
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="fr.lla_sio.androidfootregion.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>
