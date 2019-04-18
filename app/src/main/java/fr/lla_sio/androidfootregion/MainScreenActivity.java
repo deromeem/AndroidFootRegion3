@@ -21,6 +21,8 @@ public class MainScreenActivity extends AppCompatActivity {
     Button btnViewJoueurs;
     Button btnViewMatchs;
     Button btnViewMesClubs;
+    Button btnViewDiscussions;
+
 
     String userName = "";
     private static final String TAG_USER_NAME = "name";
@@ -44,6 +46,7 @@ public class MainScreenActivity extends AppCompatActivity {
         btnViewJoueurs = (Button) findViewById(R.id.btnViewJoueurs);
         btnViewMatchs = (Button) findViewById(R.id.btnViewMatchs);
         btnViewMesClubs = (Button) findViewById(R.id.btnViewMesClubs);
+        btnViewDiscussions = (Button) findViewById(R.id.btnViewDiscussions);
 
         // événement de clic sur le bouton de visualisation des modèles
         btnViewMesMessages.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +86,16 @@ public class MainScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getApplicationContext(), MesClubsActivity.class);
+                in.putExtra(TAG_USER_LOGIN, userLogin);
+                in.putExtra(TAG_USER_PWD, userPwd);
+                startActivity(in);
+            }
+        });
+
+        btnViewDiscussions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getApplicationContext(), DiscussionsActivity.class);
                 in.putExtra(TAG_USER_LOGIN, userLogin);
                 in.putExtra(TAG_USER_PWD, userPwd);
                 startActivity(in);

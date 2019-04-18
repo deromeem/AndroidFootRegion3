@@ -49,6 +49,13 @@
             android:text="Mes clubs"
             android:layout_marginTop="25dip"/>
 
+        <Button android:id="@+id/btnViewDiscussions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mes clubs"
+            android:layout_marginTop="25dip"/>
+
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -25,6 +25,8 @@
         <activity android:name=".MesMatchsActivity" />
         <activity android:name=".MesClubsActivity"/>
         <activity android:name=".ClubActivity"/>
+        <activity android:name=".DiscussionsActivity"/>
+        <activity android:name=".DiscussionActivity"/>
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
