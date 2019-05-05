@@ -1,4 +1,4 @@
-#Tue Apr 16 14:24:36 CEST 2019
+#Tue Apr 30 17:16:27 CEST 2019
 path.1=classes.dex
 path.0=classes.dex
 renamed.10=classes11.dex
@@ -12,16 +12,16 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 base.9=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
 renamed.1=classes2.dex
-base.8=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.8=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
 renamed.0=classes.dex
-base.7=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
-base.6=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.5=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
-base.4=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
-base.3=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
-base.2=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
-base.1=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
-base.0=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+base.7=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
+base.6=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+base.5=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+base.4=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.3=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.2=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.1=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.0=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
 base.10=C\:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\21
 path.10=classes.dex
 path.9=classes.dex

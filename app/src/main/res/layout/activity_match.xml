@@ -35,20 +35,20 @@
             android:singleLine="true"
             android:textSize="17dip" />
 
-        <!-- Etiquette date -->
+        <!-- Etiquette date_heure -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dip"
             android:paddingTop="10dip"
             android:paddingRight="10dip"
-            android:text="Date :"
+            android:text="Date heure :"
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur date/heure -->
+        <!-- Valeur date_heure -->
         <TextView
-            android:id="@+id/date_heure"
+            android:id="@+id/date"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dip"
@@ -84,7 +84,7 @@
             android:paddingLeft="10dip"
             android:paddingTop="10dip"
             android:paddingRight="10dip"
-            android:text="Score visiteur :"
+            android:text="Score invite :"
             android:textSize="17dip"
             android:textStyle="bold" />
 
@@ -99,18 +99,18 @@
             android:lines="10"
             android:textSize="17dip" />
 
-        <!-- Etiquette adresse -->
+        <!-- Etiquette adr_rue -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dip"
             android:paddingTop="10dip"
             android:paddingRight="10dip"
-            android:text="Adresse :"
+            android:text="Adresse rue :"
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur adresse -->
+        <!-- Valeur adr_rue -->
         <TextView
             android:id="@+id/adr_rue"
             android:layout_width="fill_parent"
@@ -121,18 +121,18 @@
             android:lines="10"
             android:textSize="17dip" />
 
-        <!-- Etiquette ville -->
+        <!-- Etiquette adr_ville -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dip"
             android:paddingTop="10dip"
             android:paddingRight="10dip"
-            android:text="Ville :"
+            android:text="Adresse ville :"
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur ville -->
+        <!-- Valeur adr_ville -->
         <TextView
             android:id="@+id/adr_ville"
             android:layout_width="fill_parent"
@@ -143,7 +143,7 @@
             android:lines="10"
             android:textSize="17dip" />
 
-        <!-- Etiquette code postal -->
+        <!-- Etiquette adr_cp -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -154,7 +154,7 @@
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur code postal -->
+        <!-- Valeur adr_cp -->
         <TextView
             android:id="@+id/adr_cp"
             android:layout_width="fill_parent"
@@ -165,18 +165,18 @@
             android:lines="10"
             android:textSize="17dip" />
 
-        <!-- Etiquette coordonnées gps -->
+        <!-- Etiquette coord_gps -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dip"
             android:paddingTop="10dip"
             android:paddingRight="10dip"
-            android:text="Coordonnées GPS :"
+            android:text="Coordonnees GPS :"
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur coordonnées gps -->
+        <!-- Valeur coord_gps -->
         <TextView
             android:id="@+id/coord_gps"
             android:layout_width="fill_parent"
@@ -187,73 +187,7 @@
             android:lines="10"
             android:textSize="17dip" />
 
-        <!-- Etiquette equipe invite -->
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dip"
-            android:paddingTop="10dip"
-            android:paddingRight="10dip"
-            android:text="Equipe invite :"
-            android:textSize="17dip"
-            android:textStyle="bold" />
-
-        <!-- Valeur equipe invite -->
-        <TextView
-            android:id="@+id/equipe_invite"
-            android:layout_width="fill_parent"
-            android:layout_height="24dp"
-            android:layout_margin="5dip"
-            android:layout_marginBottom="10dip"
-            android:gravity="top"
-            android:lines="10"
-            android:textSize="17dip" />
-
-        <!-- Etiquette equipe domicile -->
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dip"
-            android:paddingTop="10dip"
-            android:paddingRight="10dip"
-            android:text="Equipe domicile :"
-            android:textSize="17dip"
-            android:textStyle="bold" />
-
-        <!-- Valeur equipe domicile -->
-        <TextView
-            android:id="@+id/equipe_domicile"
-            android:layout_width="fill_parent"
-            android:layout_height="24dp"
-            android:layout_margin="5dip"
-            android:layout_marginBottom="10dip"
-            android:gravity="top"
-            android:lines="10"
-            android:textSize="17dip" />
-
-        <!-- Etiquette entraineur invite -->
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dip"
-            android:paddingTop="10dip"
-            android:paddingRight="10dip"
-            android:text="Entraineur invité :"
-            android:textSize="17dip"
-            android:textStyle="bold" />
-
-        <!-- Valeur entraineur invite -->
-        <TextView
-            android:id="@+id/entraineur_invite"
-            android:layout_width="fill_parent"
-            android:layout_height="24dp"
-            android:layout_margin="5dip"
-            android:layout_marginBottom="10dip"
-            android:gravity="top"
-            android:lines="10"
-            android:textSize="17dip" />
-
-        <!-- Etiquette entraineur initiateur -->
+        <!-- Etiquette entraineur_initiateur -->
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -264,9 +198,75 @@
             android:textSize="17dip"
             android:textStyle="bold" />
 
-        <!-- Valeur entraineur initiateur -->
+        <!-- Valeur entraineur_initiateur -->
         <TextView
             android:id="@+id/entraineur_initiateur"
+            android:layout_width="fill_parent"
+            android:layout_height="24dp"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:gravity="top"
+            android:lines="10"
+            android:textSize="17dip" />
+
+        <!-- Etiquette entraineur_invite -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip"
+            android:paddingRight="10dip"
+            android:text="Entraineur invite :"
+            android:textSize="17dip"
+            android:textStyle="bold" />
+
+        <!-- Valeur entraineur_invite -->
+        <TextView
+            android:id="@+id/entraineur_invite"
+            android:layout_width="fill_parent"
+            android:layout_height="24dp"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:gravity="top"
+            android:lines="10"
+            android:textSize="17dip" />
+
+        <!-- Etiquette equipe_domicile -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip"
+            android:paddingRight="10dip"
+            android:text="Equipe domicile :"
+            android:textSize="17dip"
+            android:textStyle="bold" />
+
+        <!-- Valeur equipe_domicile -->
+        <TextView
+            android:id="@+id/equipe_domicile"
+            android:layout_width="fill_parent"
+            android:layout_height="24dp"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:gravity="top"
+            android:lines="10"
+            android:textSize="17dip" />
+
+        <!-- Etiquette equipe_invite -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dip"
+            android:paddingTop="10dip"
+            android:paddingRight="10dip"
+            android:text="Equipe invite :"
+            android:textSize="17dip"
+            android:textStyle="bold" />
+
+        <!-- Valeur equipe_invite -->
+        <TextView
+            android:id="@+id/equipe_invite"
             android:layout_width="fill_parent"
             android:layout_height="24dp"
             android:layout_margin="5dip"

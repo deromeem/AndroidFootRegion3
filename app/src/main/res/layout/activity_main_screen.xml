@@ -21,40 +21,40 @@
             android:layout_marginBottom="10dip"
             android:textSize="17dip"/>
 
-        <!--  Bouton pour afficher les abonnements de l'utilisateur -->
+        <!--  Bouton pour afficher les messages -->
         <Button android:id="@+id/btnViewMesMessages"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Mes messages"
             android:layout_marginTop="25dip"/>
 
-        <!--  Bouton pour afficher les groupes de l'utilisateur -->
+        <!--  Bouton pour afficher les joueurs -->
         <Button android:id="@+id/btnViewJoueurs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Joueurs"
             android:layout_marginTop="25dip"/>
 
-        <!--  Bouton pour afficher la liste des Matchs -->
+        <!--  Bouton pour afficher les discussions -->
+        <Button android:id="@+id/btnViewDiscussions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Discussions"
+            android:layout_marginTop="25dip"/>
+
+        <!--  Bouton pour afficher les matchs -->
         <Button android:id="@+id/btnViewMatchs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Matchs"
             android:layout_marginTop="25dip"/>
 
-            <!--  Bouton pour afficher la liste des MesClubs -->
+            <!--  Bouton pour afficher mes clubs pour un directeur -->
         <Button android:id="@+id/btnViewMesClubs"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Mes clubs"
             android:layout_marginTop="25dip"/>
-
-        <Button android:id="@+id/btnViewDiscussions"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Mes clubs"
-            android:layout_marginTop="25dip"/>
-
 
     </LinearLayout>
 

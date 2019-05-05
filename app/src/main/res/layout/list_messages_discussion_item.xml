@@ -14,22 +14,6 @@
             android:layout_height="wrap_content"
             android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/did"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
-
-       <!-- nom -->
-        <TextView
-            android:id="@+id/auteur"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="6dip"
-            android:paddingLeft="6dip"
-            android:textSize="17dip"
-            android:textStyle="normal" />
-
         <!-- date -->
         <TextView
             android:id="@+id/date"
@@ -40,9 +24,9 @@
             android:textSize="17dip"
             android:textStyle="normal" />
 
-        <!-- theme -->
+        <!-- libelle -->
         <TextView
-            android:id="@+id/theme"
+            android:id="@+id/libelle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="6dip"
@@ -50,7 +34,15 @@
             android:textSize="17dip"
             android:textStyle="normal" />
 
-
+        <!-- discussion -->
+        <TextView
+            android:id="@+id/auteur"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dip"
+            android:paddingLeft="6dip"
+            android:textSize="17dip"
+            android:textStyle="normal" />
 
     </LinearLayout>
 

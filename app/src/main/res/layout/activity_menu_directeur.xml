@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuDirecteurActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:ignore="MissingConstraints">
+
+        <!-- Nom de l'utilisateur connecté -->
+        <TextView android:id="@+id/txtUserName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:layout_marginBottom="10dip"
+            android:textSize="17dip"/>
+
+        <!--  Bouton pour afficher les discussions -->
+        <Button android:id="@+id/btnViewDiscussions"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Discussions"
+            android:layout_marginTop="25dip"/>
+
+        <!--  Bouton pour afficher les matchs -->
+        <Button android:id="@+id/btnViewMatchs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Matchs"
+            android:layout_marginTop="25dip"/>
+
+        <!--  Bouton pour afficher mes clubs pour un directeur -->
+        <Button android:id="@+id/btnViewMesClubs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mes clubs"
+            android:layout_marginTop="25dip"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

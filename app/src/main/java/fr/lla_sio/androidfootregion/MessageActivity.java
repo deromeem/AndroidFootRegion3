@@ -2,11 +2,14 @@ package fr.lla_sio.androidfootregion;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -100,10 +103,14 @@ public class MessageActivity extends AppCompatActivity {
             pDialog2.setCancelable(true);
             pDialog2.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MessageActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(MessageActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond de l'élément au format JSON par une requête HTTP :

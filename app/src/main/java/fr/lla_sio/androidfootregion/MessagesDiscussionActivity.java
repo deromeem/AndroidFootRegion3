@@ -11,9 +11,11 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,7 +25,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MesMatchsActivity extends ListActivity {
+public class MessagesDiscussionActivity extends ListActivity {
 
     // paramètres de connexion à transmettre par intent à l'activité suivante :
     String userLogin = "";
@@ -35,12 +37,14 @@ public class MesMatchsActivity extends ListActivity {
     ArrayList<HashMap<String, String>> itemsList = new ArrayList<HashMap<String, String>>();
 
     // noms des noeuds JSON :
-    private static final String TAG_TASK = "matchs";
+    private static final String TAG_TASK = "messages_discussion";
     private static final String TAG_ID = "id";
-    private static final String TAG_NOM = "Nom";
-    private static final String TAG_DATE = "Date";
-    private static final String TAG_VILLE = "Ville";
-    private static final String TAG_STATUTED = "Statut";
+    private static final String TAG_DID = "did";
+    private static final String TAG_DATE = "date";
+    private static final String TAG_LIBELLE = "libelle";
+    private static final String TAG_AUTEUR = "auteur";
+
+    String did = "1";
 
     // tableau JSON de la liste des items :
     JSONArray items = null;
@@ -48,13 +52,18 @@ public class MesMatchsActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mes_matchs);
+        setContentView(R.layout.activity_messages_discussion);
 
         // récupération de l'intent de la vue courante :
         Intent i = getIntent();
         // obtention des paramètres de connexion à partir de l'intent :
         userLogin = i.getStringExtra(TAG_USER_LOGIN);
         userPwd = i.getStringExtra(TAG_USER_PWD);
+
+        // obtention de l'aid de l'élément à partir de l'intent :
+        did = i.getStringExtra(TAG_DID);
+        // DEBUG : affichage temporaire de aid
+        // Toast.makeText(ClubActivity.this, "Elément demandé aid : "+aid, Toast.LENGTH_LONG).show();
 
         // chargement des items en fil d'exécution de fond (background thread) :
         new LoadItems().execute();
@@ -70,11 +79,12 @@ public class MesMatchsActivity extends ListActivity {
                                     int position, long id) {
                 // recherche de l'aid de l'élément sélectionné (ListItem) dans la liste
                 String aid = ((TextView) view.findViewById(R.id.aid)).getText().toString();
+
                 // DEBUG : affichage temporaire de aid
-                // Toast.makeText(MesMatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
+                // Toast.makeText(MatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
 
                 // création d'une nouvelle intention (intent)
-                Intent in = new Intent(getApplicationContext(), MesMatchsActivity.class);
+                Intent in = new Intent(getApplicationContext(), MessageActivity.class);
                 in.putExtra(TAG_USER_LOGIN, userLogin);
                 in.putExtra(TAG_USER_PWD, userPwd);
                 // envoi de l'aid à l'activité suivante (activity)
@@ -116,16 +126,20 @@ public class MesMatchsActivity extends ListActivity {
         @Override
         protected void onPreExecute() {
             // super.onPreExecute();
-            pDialog = new ProgressDialog(MesMatchsActivity.this);
+            pDialog = new ProgressDialog(MessagesDiscussionActivity.this);
             pDialog.setMessage("Attente de connexion...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MesMatchsActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(MessagesDiscussionActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond des items au format JSON par une requête HTTP
@@ -136,6 +150,7 @@ public class MesMatchsActivity extends ListActivity {
                 params.put("login", userLogin);
                 params.put("pwd", userPwd);
                 params.put("task", TAG_TASK);
+                params.put("did", did);
 
                 Log.d("request", "starting");
 
@@ -162,7 +177,7 @@ public class MesMatchsActivity extends ListActivity {
             }
 
             if (json != null) {
-                Toast.makeText(MesMatchsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
+                Toast.makeText(MessagesDiscussionActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
@@ -182,20 +197,20 @@ public class MesMatchsActivity extends ListActivity {
 
                         // enregistrement de chaque élément JSON dans une variable
                         String id = obj.getString(TAG_ID);
-                        String nom = obj.getString(TAG_NOM);
                         String date = obj.getString(TAG_DATE);
-                        String ville = obj.getString(TAG_VILLE);
-                        String statut = obj.getString(TAG_STATUTED);
+                        String libelle = obj.getString(TAG_LIBELLE);
+                        String auteur = obj.getString(TAG_AUTEUR);
+
+
 
                         // création d'un nouveau HashMap
                         HashMap<String, String> map = new HashMap<>();
 
                         // ajout de chaque variable (clé, valeur) dans le HashMap
                         map.put(TAG_ID, id);
-                        map.put(TAG_NOM, nom);
                         map.put(TAG_DATE, date);
-                        map.put(TAG_VILLE, ville);
-                        map.put(TAG_STATUTED, statut);
+                        map.put(TAG_LIBELLE, libelle);
+                        map.put(TAG_AUTEUR, auteur);
 
                         // ajout du HashMap dans le tableau des items
                         itemsList.add(map);
@@ -214,9 +229,9 @@ public class MesMatchsActivity extends ListActivity {
                     // mise à jour de la ListView avec les données JSON mises dans le tableau itemsList
                     ListAdapter adapter;
                     adapter = new SimpleAdapter(
-                            MesMatchsActivity.this, itemsList,
-                            R.layout.list_match_item, new String[]{TAG_ID, TAG_NOM, TAG_DATE, TAG_VILLE, TAG_STATUTED},
-                            new int[]{R.id.aid, R.id.nom, R.id.date, R.id.ville, R.id.statut});
+                            MessagesDiscussionActivity.this, itemsList,
+                            R.layout.list_messages_discussion_item, new String[]{TAG_ID, TAG_DATE, TAG_LIBELLE, TAG_AUTEUR},
+                            new int[]{R.id.aid, R.id.date, R.id.libelle, R.id.auteur});
                     setListAdapter(adapter);
                 }
             });

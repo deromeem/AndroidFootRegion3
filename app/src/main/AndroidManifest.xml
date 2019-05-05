@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MenuDirecteurActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,13 +21,14 @@
         </activity>
         <activity android:name=".MainScreenActivity" />
         <activity android:name=".MesMessagesActivity" />
-        <activity android:name=".JoueursActivity" />
         <activity android:name=".MessageActivity" />
-        <activity android:name=".MesMatchsActivity" />
-        <activity android:name=".MesClubsActivity"/>
-        <activity android:name=".ClubActivity"/>
-        <activity android:name=".DiscussionsActivity"/>
-        <activity android:name=".DiscussionActivity"/>
+        <activity android:name=".JoueursActivity" />
+        <activity android:name=".MatchsActivity" />
+        <activity android:name=".MatchActivity" />
+        <activity android:name=".MesClubsActivity" />
+        <activity android:name=".ClubActivity" />
+        <activity android:name=".DiscussionsActivity" />
+        <activity android:name=".MessagesDiscussionActivity" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />

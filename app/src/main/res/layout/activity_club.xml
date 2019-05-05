@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         tools:context=".ClubActivity">
 
-        <!-- Etiquette date -->
+        <!-- Etiquette nom -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Nom :"
@@ -24,7 +24,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur date -->
+        <!-- Valeur nom -->
         <TextView android:id="@+id/nom"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette libelle -->
+        <!-- Etiquette adr_rue -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Adr_rue :"
@@ -43,7 +43,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur libelle -->
+        <!-- Valeur adr_rue -->
         <TextView android:id="@+id/adr_rue"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette discussion -->
+        <!-- Etiquette sigle -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Sigle :"
@@ -62,7 +62,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur discussion -->
+        <!-- Valeur sigle -->
         <TextView android:id="@+id/sigle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette email -->
+        <!-- Etiquette adr_ville -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Adr_ville :"
@@ -81,7 +81,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur email -->
+        <!-- Valeur adr_ville -->
         <TextView android:id="@+id/adr_ville"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette email -->
+        <!-- Etiquette adr_cp -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Adr_cp :"
@@ -100,7 +100,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur email -->
+        <!-- Valeur adr_cp -->
         <TextView android:id="@+id/adr_cp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -128,45 +128,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette email -->
-        <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="emailEntraineur :"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="10dip"
-            android:textSize="17dip"
-            android:textStyle="bold"/>
-
-        <!-- Valeur email -->
-        <TextView android:id="@+id/emailEntraineur"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dip"
-            android:layout_marginBottom="10dip"
-            android:textSize="17dip"
-            android:singleLine="true"/>
-
-        <!-- Etiquette email -->
-        <TextView android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="emailJoueur :"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="10dip"
-            android:textSize="17dip"
-            android:textStyle="bold"/>
-
-        <!-- Valeur email -->
-        <TextView android:id="@+id/emailJoueur"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dip"
-            android:layout_marginBottom="10dip"
-            android:textSize="17dip"
-            android:singleLine="true"/>
-
-        <!-- Etiquette email -->
+        <!-- Etiquette nomDirecteur -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="nomDirecteur :"
@@ -176,7 +138,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur email -->
+        <!-- Valeur nomDirecteur -->
         <TextView android:id="@+id/nomDirecteur"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -185,7 +147,7 @@
             android:textSize="17dip"
             android:singleLine="true"/>
 
-        <!-- Etiquette email -->
+        <!-- Etiquette prenomDirecteur -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="prenomDirecteur :"
@@ -195,7 +157,7 @@
             android:textSize="17dip"
             android:textStyle="bold"/>
 
-        <!-- Valeur email -->
+        <!-- Valeur prenomDirecteur -->
         <TextView android:id="@+id/prenomDirecteur"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

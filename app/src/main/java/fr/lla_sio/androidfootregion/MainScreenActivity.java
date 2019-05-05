@@ -25,7 +25,9 @@ public class MainScreenActivity extends AppCompatActivity {
 
 
     String userName = "";
+    String userGroup = "";
     private static final String TAG_USER_NAME = "name";
+    private static final String TAG_USER_GROUP = "frgroup";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,19 +38,20 @@ public class MainScreenActivity extends AppCompatActivity {
         Intent in = getIntent();
         // obtention des paramêtres du user connecté à partir de l'intent
         userName = in.getStringExtra(TAG_USER_NAME);
+        userGroup = in.getStringExtra(TAG_USER_GROUP);
         userLogin = in.getStringExtra(TAG_USER_LOGIN);
         userPwd = in.getStringExtra(TAG_USER_PWD);
 
         // déclaration des textes et boutons
         txtUserName = (TextView) findViewById(R.id.txtUserName);
-        txtUserName.setText(userName);
+        txtUserName.setText(userName + " (" + userGroup + ")");
         btnViewMesMessages = (Button) findViewById(R.id.btnViewMesMessages);
         btnViewJoueurs = (Button) findViewById(R.id.btnViewJoueurs);
         btnViewMatchs = (Button) findViewById(R.id.btnViewMatchs);
         btnViewMesClubs = (Button) findViewById(R.id.btnViewMesClubs);
         btnViewDiscussions = (Button) findViewById(R.id.btnViewDiscussions);
 
-        // événement de clic sur le bouton de visualisation des modèles
+        // événement de clic sur le bouton de visualisation des messages :
         btnViewMesMessages.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +62,7 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
-        // événement de clic sur le bouton de visualisation des commandes
+        // événement de clic sur le bouton de visualisation des joueurs :
         btnViewJoueurs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,32 +73,33 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
-        // événement de clic sur le bouton de visualisation des commandes
-        btnViewMatchs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(getApplicationContext(), MesMatchsActivity.class);
-                in.putExtra(TAG_USER_LOGIN, userLogin);
-                in.putExtra(TAG_USER_PWD, userPwd);
-                startActivity(in);
-            }
-        });
-
-        // événement de clic sur le bouton de visualisation des commandes
-        btnViewMesClubs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(getApplicationContext(), MesClubsActivity.class);
-                in.putExtra(TAG_USER_LOGIN, userLogin);
-                in.putExtra(TAG_USER_PWD, userPwd);
-                startActivity(in);
-            }
-        });
-
+        // événement de clic sur le bouton de visualisation des discussions :
         btnViewDiscussions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getApplicationContext(), DiscussionsActivity.class);
+                in.putExtra(TAG_USER_LOGIN, userLogin);
+                in.putExtra(TAG_USER_PWD, userPwd);
+                startActivity(in);
+            }
+        });
+
+        // événement de clic sur le bouton de visualisation des matchs :
+        btnViewMatchs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getApplicationContext(), MatchsActivity.class);
+                in.putExtra(TAG_USER_LOGIN, userLogin);
+                in.putExtra(TAG_USER_PWD, userPwd);
+                startActivity(in);
+            }
+        });
+
+        // événement de clic sur le bouton de visualisation de mes clubs :
+        btnViewMesClubs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getApplicationContext(), MesClubsActivity.class);
                 in.putExtra(TAG_USER_LOGIN, userLogin);
                 in.putExtra(TAG_USER_PWD, userPwd);
                 startActivity(in);

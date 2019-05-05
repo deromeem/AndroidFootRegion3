@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="fr.lla_sio.androidfootregion.MenuDirecteurActivity" />
         <activity android:name="fr.lla_sio.androidfootregion.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +29,14 @@
         </activity>
         <activity android:name="fr.lla_sio.androidfootregion.MainScreenActivity" />
         <activity android:name="fr.lla_sio.androidfootregion.MesMessagesActivity" />
-        <activity android:name="fr.lla_sio.androidfootregion.JoueursActivity" />
         <activity android:name="fr.lla_sio.androidfootregion.MessageActivity" />
-        <activity android:name="fr.lla_sio.androidfootregion.MesMatchsActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.JoueursActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MatchsActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MatchActivity" />
         <activity android:name="fr.lla_sio.androidfootregion.MesClubsActivity" />
         <activity android:name="fr.lla_sio.androidfootregion.ClubActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.DiscussionsActivity" />
+        <activity android:name="fr.lla_sio.androidfootregion.MessagesDiscussionActivity" />
         <activity
             android:name="fr.lla_sio.androidfootregion.SettingsActivity"
             android:label="@string/title_activity_settings" />

@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\913e2331f517d8196bce10f26babd4dc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6211c339c5d60818eebedd5e8fd4728c\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\21c55ae3cbb72776fd04e3e5972dc797\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\bccbf8aecbf91485a6be42b99eb7806e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\587fbae9f03b1935819fda08a21d39bb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8b4004ca41e4439e7613634e0246d095\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\567cfa051c8a52632cb2fd4de6b42527\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\eeff33154497a49da3b500727b2940ea\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a90a02b5fd215760abd0bf76e5ab9694\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0dff83dc03bc3d56a17ad520cd5c125f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d9d662682eacc0c69ec190e0f252b3d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3be17d785fce04db17f59b952e6618fa\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ad7aa2bc1218e74a42b279e4a7ed1ff7\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1986ebbb93dc32e7798997fe6c15ba0e\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\efd8676ef56ab06762608d1814204ddc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\951a9e045bd84cdbcc6549b573e8c299\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\5f6b629952850c74f7bbf1342c1264b2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\eb387bd24a560de488da6365c2afb4bb\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cee0483567b3a59829db4ec9a8f67ea9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b71dc0d219576d725bcd6d0fcec55105\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\f3bf7879585eaa1e8713f0fab76aab0a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\37e3e2088d77543a73b2ba3382a2f6fd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\2d48bceff5266cb683dbf7d2d125b126\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b08adc52b8ee0480cfd6ba331a1576ad\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\d637dbaa83be53642069432367f903f6\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\4eda73f8fb2965c14d790a5fbc35e019\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cd717fdcf8053742ddd7872097821332\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b8108ba29875d1a63dc2ff9d9e1f3809\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:3:5-43
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:1-40:12
 		INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:2:11-69
@@ -40,9 +40,9 @@ ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:7:5-34:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6211c339c5d60818eebedd5e8fd4728c\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6211c339c5d60818eebedd5e8fd4728c\AndroidManifest.xml:9:5-20
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:7:5-38:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\951a9e045bd84cdbcc6549b573e8c299\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\951a9e045bd84cdbcc6549b573e8c299\AndroidManifest.xml:9:5-20
 	android:supportsRtl
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
@@ -55,92 +55,108 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\af
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:13:9-40
+activity#fr.lla_sio.androidfootregion.MenuDirecteurActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:14:9-68
+	android:name
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:14:19-56
 activity#fr.lla_sio.androidfootregion.MainActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:14:9-20:20
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:14:19-47
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:15:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:15:13-19:29
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:18:17-77
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:18:27-74
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:19:27-74
 activity#fr.lla_sio.androidfootregion.MainScreenActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:21:9-56
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:22:9-56
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:21:19-53
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:22:19-53
 activity#fr.lla_sio.androidfootregion.MesMessagesActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:22:9-57
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:23:9-57
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:22:19-54
-activity#fr.lla_sio.androidfootregion.JoueursActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:23:9-53
-	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:23:19-50
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:23:19-54
 activity#fr.lla_sio.androidfootregion.MessageActivity
 ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:24:9-53
 	android:name
 		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:24:19-50
-activity#fr.lla_sio.androidfootregion.MesMatchsActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:25:9-55
+activity#fr.lla_sio.androidfootregion.JoueursActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:25:9-53
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:25:19-52
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:25:19-50
+activity#fr.lla_sio.androidfootregion.MatchsActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:26:9-52
+	android:name
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:26:19-49
+activity#fr.lla_sio.androidfootregion.MatchActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:27:9-51
+	android:name
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:27:19-48
 activity#fr.lla_sio.androidfootregion.MesClubsActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:26:9-53
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:28:9-54
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:26:19-51
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:28:19-51
 activity#fr.lla_sio.androidfootregion.ClubActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:27:9-49
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:29:9-50
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:27:19-47
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:29:19-47
+activity#fr.lla_sio.androidfootregion.DiscussionsActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:30:9-57
+	android:name
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:30:19-54
+activity#fr.lla_sio.androidfootregion.MessagesDiscussionActivity
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:31:9-64
+	android:name
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:31:19-61
 activity#fr.lla_sio.androidfootregion.SettingsActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:28:9-30:63
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:32:9-34:63
 	android:label
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:30:13-60
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:34:13-60
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:29:13-45
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:33:13-45
 activity#fr.lla_sio.androidfootregion.MyPreferenceActivity
-ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:31:9-33:61
+ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:35:9-37:61
 	android:label
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:33:13-58
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:37:13-58
 	android:name
-		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml:36:13-49
 uses-sdk
 INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\913e2331f517d8196bce10f26babd4dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\913e2331f517d8196bce10f26babd4dc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6211c339c5d60818eebedd5e8fd4728c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6211c339c5d60818eebedd5e8fd4728c\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\21c55ae3cbb72776fd04e3e5972dc797\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.1.aar\21c55ae3cbb72776fd04e3e5972dc797\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\bccbf8aecbf91485a6be42b99eb7806e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\bccbf8aecbf91485a6be42b99eb7806e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\587fbae9f03b1935819fda08a21d39bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\587fbae9f03b1935819fda08a21d39bb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8b4004ca41e4439e7613634e0246d095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\8b4004ca41e4439e7613634e0246d095\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\567cfa051c8a52632cb2fd4de6b42527\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\567cfa051c8a52632cb2fd4de6b42527\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\eeff33154497a49da3b500727b2940ea\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\eeff33154497a49da3b500727b2940ea\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a90a02b5fd215760abd0bf76e5ab9694\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.1.aar\a90a02b5fd215760abd0bf76e5ab9694\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0dff83dc03bc3d56a17ad520cd5c125f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\0dff83dc03bc3d56a17ad520cd5c125f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d9d662682eacc0c69ec190e0f252b3d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\2d9d662682eacc0c69ec190e0f252b3d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3be17d785fce04db17f59b952e6618fa\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\3be17d785fce04db17f59b952e6618fa\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ad7aa2bc1218e74a42b279e4a7ed1ff7\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\ad7aa2bc1218e74a42b279e4a7ed1ff7\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1986ebbb93dc32e7798997fe6c15ba0e\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\aforson.LOUISARMAND\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\1986ebbb93dc32e7798997fe6c15ba0e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\efd8676ef56ab06762608d1814204ddc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\efd8676ef56ab06762608d1814204ddc\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\951a9e045bd84cdbcc6549b573e8c299\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\951a9e045bd84cdbcc6549b573e8c299\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\5f6b629952850c74f7bbf1342c1264b2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\5f6b629952850c74f7bbf1342c1264b2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\eb387bd24a560de488da6365c2afb4bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\eb387bd24a560de488da6365c2afb4bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cee0483567b3a59829db4ec9a8f67ea9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cee0483567b3a59829db4ec9a8f67ea9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b71dc0d219576d725bcd6d0fcec55105\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b71dc0d219576d725bcd6d0fcec55105\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\f3bf7879585eaa1e8713f0fab76aab0a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\f3bf7879585eaa1e8713f0fab76aab0a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\37e3e2088d77543a73b2ba3382a2f6fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\37e3e2088d77543a73b2ba3382a2f6fd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\2d48bceff5266cb683dbf7d2d125b126\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\2d48bceff5266cb683dbf7d2d125b126\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b08adc52b8ee0480cfd6ba331a1576ad\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b08adc52b8ee0480cfd6ba331a1576ad\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\d637dbaa83be53642069432367f903f6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\d637dbaa83be53642069432367f903f6\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\4eda73f8fb2965c14d790a5fbc35e019\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\4eda73f8fb2965c14d790a5fbc35e019\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cd717fdcf8053742ddd7872097821332\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\cd717fdcf8053742ddd7872097821332\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b8108ba29875d1a63dc2ff9d9e1f3809\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] C:\Users\emman\.gradle\caches\transforms-2\files-2.1\b8108ba29875d1a63dc2ff9d9e1f3809\AndroidManifest.xml:20:5-44
 INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 INJECTED from C:\AndroidStudioProjects\AndroidFootRegion3\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

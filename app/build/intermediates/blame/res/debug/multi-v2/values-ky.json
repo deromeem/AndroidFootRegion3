@@ -4,7 +4,7 @@
             "outputFile": "C:\\AndroidStudioProjects\\AndroidFootRegion3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\aforson.LOUISARMAND\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\0dff83dc03bc3d56a17ad520cd5c125f\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\emman\\.gradle\\caches\\transforms-2\\files-2.1\\b08adc52b8ee0480cfd6ba331a1576ad\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\aforson.LOUISARMAND\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\913e2331f517d8196bce10f26babd4dc\\res\\values-ky\\values-ky.xml",
+                    "source": "C:\\Users\\emman\\.gradle\\caches\\transforms-2\\files-2.1\\efd8676ef56ab06762608d1814204ddc\\res\\values-ky\\values-ky.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

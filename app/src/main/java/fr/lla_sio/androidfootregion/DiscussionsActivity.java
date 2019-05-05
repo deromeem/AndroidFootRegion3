@@ -11,9 +11,11 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,7 +23,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DiscussionsActivity extends ListActivity {
 
@@ -36,10 +37,11 @@ public class DiscussionsActivity extends ListActivity {
 
     // noms des noeuds JSON :
     private static final String TAG_TASK = "discussions";
+    private static final String TAG_ID = "id";
     private static final String TAG_DID = "did";
-    private static final String TAG_THEME = "theme";
-    private static final String TAG_NOM = "auteur";
     private static final String TAG_DATE = "date";
+    private static final String TAG_THEME = "theme";
+    private static final String TAG_LANCEUR = "lanceur";
 
 
     // tableau JSON de la liste des items :
@@ -70,17 +72,15 @@ public class DiscussionsActivity extends ListActivity {
                                     int position, long id) {
                 // recherche de l'aid de l'élément sélectionné (ListItem) dans la liste
                 String aid = ((TextView) view.findViewById(R.id.aid)).getText().toString();
-                String did = ((TextView) view.findViewById(R.id.did)).getText().toString();
                 // DEBUG : affichage temporaire de aid
-                // Toast.makeText(MesMatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
+                // Toast.makeText(MatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
 
                 // création d'une nouvelle intention (intent)
-                Intent in = new Intent(getApplicationContext(), DiscussionActivity.class);
-                in.putExtra(TAG_DID, did);
+                Intent in = new Intent(getApplicationContext(), MessagesDiscussionActivity.class);
                 in.putExtra(TAG_USER_LOGIN, userLogin);
                 in.putExtra(TAG_USER_PWD, userPwd);
                 // envoi de l'aid à l'activité suivante (activity)
-                // in.putExtra(TAG_ID, aid);
+                in.putExtra(TAG_DID, aid);
                 // lancement de la nouvelle activité (vue de détail) en attente d'une réponse
                 startActivityForResult(in, 100);
             }
@@ -124,10 +124,14 @@ public class DiscussionsActivity extends ListActivity {
             pDialog.setCancelable(true);
             pDialog.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MesMatchsActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(DiscussionsActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond des items au format JSON par une requête HTTP
@@ -135,7 +139,6 @@ public class DiscussionsActivity extends ListActivity {
         protected JSONObject doInBackground(String... args) {
             try {
                 HashMap<String, String> params = new HashMap<>();
-                params.put("did", TAG_DID);
                 params.put("login", userLogin);
                 params.put("pwd", userPwd);
                 params.put("task", TAG_TASK);
@@ -165,7 +168,7 @@ public class DiscussionsActivity extends ListActivity {
             }
 
             if (json != null) {
-                Toast.makeText(DiscussionsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
+                // Toast.makeText(DiscussionsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
@@ -184,21 +187,20 @@ public class DiscussionsActivity extends ListActivity {
                         JSONObject obj = items.getJSONObject(i);
 
                         // enregistrement de chaque élément JSON dans une variable
-                        String did = obj.getString(TAG_DID);
-                        String theme = obj.getString(TAG_THEME);
-                        String nom = obj.getString(TAG_NOM);
+                        String id = obj.getString(TAG_ID);
                         String date = obj.getString(TAG_DATE);
+                        String theme = obj.getString(TAG_THEME);
+                        String lanceur = obj.getString(TAG_LANCEUR);
 
 
                         // création d'un nouveau HashMap
                         HashMap<String, String> map = new HashMap<>();
 
                         // ajout de chaque variable (clé, valeur) dans le HashMap
-                        map.put(TAG_DID, did);
-                        map.put(TAG_THEME, theme);
-                        map.put(TAG_NOM, nom);
+                        map.put(TAG_ID, id);
                         map.put(TAG_DATE, date);
-
+                        map.put(TAG_THEME, theme);
+                        map.put(TAG_LANCEUR, lanceur);
 
                         // ajout du HashMap dans le tableau des items
                         itemsList.add(map);
@@ -218,8 +220,8 @@ public class DiscussionsActivity extends ListActivity {
                     ListAdapter adapter;
                     adapter = new SimpleAdapter(
                             DiscussionsActivity.this, itemsList,
-                            R.layout.list_discussions_item, new String[]{TAG_DID, TAG_THEME, TAG_NOM, TAG_DATE},
-                            new int[]{R.id.did, R.id.theme, R.id.auteur, R.id.date});
+                            R.layout.list_discussion_item, new String[]{TAG_ID, TAG_DATE, TAG_THEME, TAG_LANCEUR},
+                            new int[]{R.id.aid, R.id.date, R.id.theme, R.id.lanceur});
                     setListAdapter(adapter);
                 }
             });

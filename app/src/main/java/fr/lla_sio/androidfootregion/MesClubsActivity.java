@@ -11,9 +11,11 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -38,8 +40,8 @@ public class MesClubsActivity extends ListActivity {
     private static final String TAG_TASK = "mes_clubs";
     private static final String TAG_ID = "id";
     private static final String TAG_NOM = "nom";
-    private static final String TAG_ADR_RUE = "adr_rue";
     private static final String TAG_SIGLE = "sigle";
+    private static final String TAG_ADR_RUE = "adr_rue";
     private static final String TAG_ADR_VILLE = "adr_ville";
     private static final String TAG_ADR_CP = "adr_cp";
 
@@ -123,10 +125,14 @@ public class MesClubsActivity extends ListActivity {
             pDialog.setCancelable(true);
             pDialog.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MesMessagesActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(MesClubsActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond des items au format JSON par une requête HTTP
@@ -163,7 +169,7 @@ public class MesClubsActivity extends ListActivity {
             }
 
             if (json != null) {
-                Toast.makeText(MesClubsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
+                // Toast.makeText(MesClubsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
@@ -218,7 +224,7 @@ public class MesClubsActivity extends ListActivity {
                     ListAdapter adapter;
                     adapter = new SimpleAdapter(
                             MesClubsActivity.this, itemsList,
-                            R.layout.list_clubs_item, new String[]{TAG_ID, TAG_NOM, TAG_ADR_RUE, TAG_SIGLE, TAG_ADR_VILLE, TAG_ADR_CP},
+                            R.layout.list_club_item, new String[]{TAG_ID, TAG_NOM, TAG_ADR_RUE, TAG_SIGLE, TAG_ADR_VILLE, TAG_ADR_CP},
                             new int[]{R.id.aid, R.id.nom, R.id.adr_rue, R.id.sigle, R.id.adr_ville, R.id.adr_cp});
                     setListAdapter(adapter);
                 }

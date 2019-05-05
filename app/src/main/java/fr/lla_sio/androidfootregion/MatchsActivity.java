@@ -11,9 +11,11 @@ import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,7 +25,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DiscussionActivity extends ListActivity {
+public class MatchsActivity extends ListActivity {
 
     // paramètres de connexion à transmettre par intent à l'activité suivante :
     String userLogin = "";
@@ -35,13 +37,12 @@ public class DiscussionActivity extends ListActivity {
     ArrayList<HashMap<String, String>> itemsList = new ArrayList<HashMap<String, String>>();
 
     // noms des noeuds JSON :
-    private static final String TAG_TASK = "discussion";
+    private static final String TAG_TASK = "matchs";
     private static final String TAG_ID = "id";
-    private static final String TAG_DATE = "created";
-    private static final String TAG_AUTEUR = "lanceur";
-    private static final String TAG_LIBELLE = "message";
-    private static final String TAG_DID = "did";
-
+    private static final String TAG_NOM = "nom";
+    private static final String TAG_DATE = "date_heure";
+    private static final String TAG_VILLE = "adr_ville";
+    private static final String TAG_STATUT = "statut";
 
     // tableau JSON de la liste des items :
     JSONArray items = null;
@@ -49,7 +50,7 @@ public class DiscussionActivity extends ListActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_discussion);
+        setContentView(R.layout.activity_matchs);
 
         // récupération de l'intent de la vue courante :
         Intent i = getIntent();
@@ -71,13 +72,11 @@ public class DiscussionActivity extends ListActivity {
                                     int position, long id) {
                 // recherche de l'aid de l'élément sélectionné (ListItem) dans la liste
                 String aid = ((TextView) view.findViewById(R.id.aid)).getText().toString();
-                String did = ((TextView) view.findViewById(R.id.did)).getText().toString();
-
                 // DEBUG : affichage temporaire de aid
-                // Toast.makeText(MesMatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
+                // Toast.makeText(MatchsActivity.this, "Messages aid : "+aid, Toast.LENGTH_LONG).show();
 
                 // création d'une nouvelle intention (intent)
-                Intent in = new Intent(getApplicationContext(), MessageActivity.class);
+                Intent in = new Intent(getApplicationContext(), MatchActivity.class);
                 in.putExtra(TAG_USER_LOGIN, userLogin);
                 in.putExtra(TAG_USER_PWD, userPwd);
                 // envoi de l'aid à l'activité suivante (activity)
@@ -119,16 +118,20 @@ public class DiscussionActivity extends ListActivity {
         @Override
         protected void onPreExecute() {
             // super.onPreExecute();
-            pDialog = new ProgressDialog(DiscussionActivity.this);
+            pDialog = new ProgressDialog(MatchsActivity.this);
             pDialog.setMessage("Attente de connexion...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MesMatchsActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(MatchsActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond des items au format JSON par une requête HTTP
@@ -139,7 +142,6 @@ public class DiscussionActivity extends ListActivity {
                 params.put("login", userLogin);
                 params.put("pwd", userPwd);
                 params.put("task", TAG_TASK);
-                params.put("did", TAG_DID);
 
                 Log.d("request", "starting");
 
@@ -166,7 +168,7 @@ public class DiscussionActivity extends ListActivity {
             }
 
             if (json != null) {
-                Toast.makeText(DiscussionActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
+                Toast.makeText(MatchsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
@@ -186,20 +188,20 @@ public class DiscussionActivity extends ListActivity {
 
                         // enregistrement de chaque élément JSON dans une variable
                         String id = obj.getString(TAG_ID);
+                        String nom = obj.getString(TAG_NOM);
                         String date = obj.getString(TAG_DATE);
-                        String auteur = obj.getString(TAG_AUTEUR);
-                        String libelle = obj.getString(TAG_LIBELLE);
-
-
+                        String ville = obj.getString(TAG_VILLE);
+                        String statut = obj.getString(TAG_STATUT);
 
                         // création d'un nouveau HashMap
                         HashMap<String, String> map = new HashMap<>();
 
                         // ajout de chaque variable (clé, valeur) dans le HashMap
                         map.put(TAG_ID, id);
+                        map.put(TAG_NOM, nom);
                         map.put(TAG_DATE, date);
-                        map.put(TAG_AUTEUR, auteur);
-                        map.put(TAG_LIBELLE, libelle);
+                        map.put(TAG_VILLE, ville);
+                        map.put(TAG_STATUT, statut);
 
                         // ajout du HashMap dans le tableau des items
                         itemsList.add(map);
@@ -218,9 +220,9 @@ public class DiscussionActivity extends ListActivity {
                     // mise à jour de la ListView avec les données JSON mises dans le tableau itemsList
                     ListAdapter adapter;
                     adapter = new SimpleAdapter(
-                            DiscussionActivity.this, itemsList,
-                            R.layout.list_discussion_item, new String[]{TAG_ID, TAG_DID, TAG_DATE, TAG_AUTEUR, TAG_LIBELLE},
-                            new int[]{R.id.aid, R.id.did, R.id.created, R.id.lanceur, R.id.message});
+                            MatchsActivity.this, itemsList,
+                            R.layout.list_match_item, new String[]{TAG_ID, TAG_NOM, TAG_DATE, TAG_VILLE, TAG_STATUT},
+                            new int[]{R.id.aid, R.id.nom, R.id.date, R.id.ville, R.id.statut});
                     setListAdapter(adapter);
                 }
             });

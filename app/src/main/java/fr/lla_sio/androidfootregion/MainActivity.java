@@ -40,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
 
     String userName = "";
     String userEmail = "";
+    String userGroup = "";
 
     // noms des noeuds JSON
     private static final String TAG_USER = "user";
     private static final String TAG_USER_NAME = "name";
     private static final String TAG_USER_EMAIL = "email";
+    private static final String TAG_USER_GROUP = "frgroup";
 
     AlertDialog.Builder alert;
     JSONObject json;
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
             if (prefAPI.equals("1")) {
                 apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
             }
-            Toast.makeText(MainActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
+            // Toast.makeText(MainActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond de la réponse au format JSON par une requête HTTP
@@ -170,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             if (json != null) {
-                Toast.makeText(MainActivity.this, json.toString(), Toast.LENGTH_LONG).show();
+                // Toast.makeText(MainActivity.this, json.toString(), Toast.LENGTH_LONG).show();
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
@@ -191,15 +193,27 @@ public class MainActivity extends AppCompatActivity {
                     // enregistrement de chaque élément JSON dans une variable
                     userName = u.getString(TAG_USER_NAME);
                     userEmail = u.getString(TAG_USER_EMAIL);
+                    userGroup = u.getString(TAG_USER_GROUP);
                     // String testEmail = userEmail;
 
                     // préparation de l'intent pour appel de MainScreenActivity (écran menu principal)
-                    Intent in = new Intent(getApplicationContext(), MainScreenActivity.class);
-                    in.putExtra(TAG_USER_NAME, userName);
-                    in.putExtra(TAG_USER_LOGIN, userLogin);
-                    in.putExtra(TAG_USER_PWD, userPwd);
-                    // lancement de la nouvelle activité
-                    startActivity(in);
+                    if (userGroup.equals("Directeur")) {
+                        Intent in = new Intent(getApplicationContext(), MenuDirecteurActivity.class);
+                        in.putExtra(TAG_USER_NAME, userName);
+                        in.putExtra(TAG_USER_GROUP, userGroup);
+                        in.putExtra(TAG_USER_LOGIN, userLogin);
+                        in.putExtra(TAG_USER_PWD, userPwd);
+                        // lancement de la nouvelle activité
+                        startActivity(in);
+                    } else {
+                        Intent in = new Intent(getApplicationContext(), MainScreenActivity.class);
+                        in.putExtra(TAG_USER_NAME, userName);
+                        in.putExtra(TAG_USER_GROUP, userGroup);
+                        in.putExtra(TAG_USER_LOGIN, userLogin);
+                        in.putExtra(TAG_USER_PWD, userPwd);
+                        // lancement de la nouvelle activité
+                        startActivity(in);
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();

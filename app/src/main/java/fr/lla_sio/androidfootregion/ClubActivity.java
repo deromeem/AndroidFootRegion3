@@ -2,11 +2,14 @@ package fr.lla_sio.androidfootregion;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,13 +27,11 @@ public class ClubActivity extends AppCompatActivity {
 
     // contrôles de la vue (layout) correspondante
     TextView txtNom;
-    TextView txtAdr_rue;
     TextView txtSigle;
+    TextView txtAdr_rue;
     TextView txtAdr_ville;
     TextView txtAdr_cp;
     TextView txtEmailDirecteur;
-    TextView txtEmailEntraineur;
-    TextView txtEmailJoueur;
     TextView txtNomDirecteur;
     TextView txtPrenomDirecteur;
 
@@ -38,16 +39,14 @@ public class ClubActivity extends AppCompatActivity {
     JSONArray item = null;
 
     // noms des noeuds JSON
-    private static final String TAG_TASK = "clubs";
+    private static final String TAG_TASK = "mes_clubs";
     private static final String TAG_ID = "id";
     private static final String TAG_NOM = "nom";
-    private static final String TAG_ADR_RUE = "adr_rue";
     private static final String TAG_SIGLE = "sigle";
+    private static final String TAG_ADR_RUE = "adr_rue";
     private static final String TAG_ADR_VILLE = "adr_ville";
     private static final String TAG_ADR_CP = "adr_cp";
-    private static final String TAG_EMAILDIRECTEUR = "emailDirecteur";
-    private static final String TAG_EMAILENTRAINEUR = "emailEntraineur";
-    private static final String TAG_EMAILJOUEUR = "emailJoueur";
+    private static final String TAG_EMAILDIRECTEUR = "email";
     private static final String TAG_NOMDIRECTEUR = "nomDirecteur";
     private static final String TAG_PRENOMDIRECTEUR = "prenomDirecteur";
 
@@ -55,13 +54,11 @@ public class ClubActivity extends AppCompatActivity {
     // variables associées aux noeuds JSON
     String aid = "1";
     String nom = "";
-    String adr_rue = "";
     String sigle = "";
+    String adr_rue = "";
     String adr_ville = "";
     String adr_cp = "";
     String emailDirecteur = "";
-    String emailEntraineur = "";
-    String emailJoueur = "";
     String nomDirecteur = "";
     String prenomDirecteur = "";
 
@@ -81,7 +78,7 @@ public class ClubActivity extends AppCompatActivity {
         // obtention de l'aid de l'élément à partir de l'intent :
         aid = in.getStringExtra(TAG_ID);
         // DEBUG : affichage temporaire de aid
-        // Toast.makeText(OffreActivity.this, "Elément demandé aid : "+aid, Toast.LENGTH_LONG).show();
+        // Toast.makeText(ClubActivity.this, "Elément demandé aid : "+aid, Toast.LENGTH_LONG).show();
 
         // chargement de l'élément en fil d'exécution de fond (background thread) :
         new GetItem().execute();
@@ -120,10 +117,14 @@ public class ClubActivity extends AppCompatActivity {
             pDialog2.setCancelable(true);
             pDialog2.show();
 
-            apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
-            // apiUrl = "http://" + getString(R.string.pref_default_api_url_dist) + "/index.php";
-
-            // Toast.makeText(MessageActivity.this, "URL de l'API : " + apiUrl, Toast.LENGTH_LONG).show();
+            // apiUrl = "http://" + getString(R.string.pref_default_api_url_loc) + "/index.php";
+            SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            apiUrl = "http://" + SP.getString("PREF_API_URL_LOC", getString(R.string.pref_default_api_url_loc)) + "/index.php";
+            String prefAPI = SP.getString("PREF_API", "0");
+            if (prefAPI.equals("1")) {
+                apiUrl = "http://" + SP.getString("PREF_API_URL_DIST", getString(R.string.pref_default_api_url_dist)) + "/index.php";
+            }
+            // Toast.makeText(ClubActivity.this,"URL de l'API : " + apiUrl,Toast.LENGTH_LONG).show();
         }
 
         // obtention en tâche de fond de l'élément au format JSON par une requête HTTP :
@@ -138,8 +139,8 @@ public class ClubActivity extends AppCompatActivity {
 
                 Log.d("request", "starting");
 
-                // JSONObject json = jsonParser2.makeHttpRequest(apiUrl, "GET", params);
-                JSONObject json = jsonParser2.makeHttpRequest(apiUrl, "POST", params);
+                JSONObject json = jsonParser2.makeHttpRequest(apiUrl, "GET", params);
+                // JSONObject json = jsonParser2.makeHttpRequest(apiUrl, "POST", params);
 
                 if (json != null) {
                     Log.d("JSON result", json.toString());
@@ -183,16 +184,13 @@ public class ClubActivity extends AppCompatActivity {
 
                     // enregistrement de chaque élément JSON dans une variable
                     nom = obj.getString(TAG_NOM);
-                    adr_rue = obj.getString(TAG_ADR_RUE);
                     sigle = obj.getString(TAG_SIGLE);
+                    adr_rue = obj.getString(TAG_ADR_RUE);
                     adr_ville = obj.getString(TAG_ADR_VILLE);
                     adr_cp = obj.getString(TAG_ADR_CP);
                     emailDirecteur = obj.getString(TAG_EMAILDIRECTEUR);
-                    emailEntraineur = obj.getString(TAG_EMAILENTRAINEUR);
-                    emailJoueur = obj.getString(TAG_EMAILJOUEUR);
                     nomDirecteur = obj.getString(TAG_NOMDIRECTEUR);
                     prenomDirecteur = obj.getString(TAG_PRENOMDIRECTEUR);
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -207,29 +205,23 @@ public class ClubActivity extends AppCompatActivity {
                 public void run() {
                     // mise à jour des TextView avec les données JSON :
                     txtNom = (TextView) findViewById(R.id.nom);
-                    txtAdr_rue = (TextView) findViewById(R.id.adr_rue);
                     txtSigle = (TextView) findViewById(R.id.sigle);
+                    txtAdr_rue = (TextView) findViewById(R.id.adr_rue);
                     txtAdr_ville = (TextView) findViewById(R.id.adr_ville);
                     txtAdr_cp = (TextView) findViewById(R.id.adr_cp);
                     txtEmailDirecteur = (TextView) findViewById(R.id.emailDirecteur);
-                    txtEmailEntraineur = (TextView) findViewById(R.id.emailEntraineur);
-                    txtEmailJoueur = (TextView) findViewById(R.id.emailJoueur);
                     txtNomDirecteur = (TextView) findViewById(R.id.nomDirecteur);
                     txtPrenomDirecteur = (TextView) findViewById(R.id.prenomDirecteur);
 
-
                     // affiche les données de l'élément dans les TextView :
                     txtNom.setText(nom);
-                    txtAdr_rue.setText(adr_rue);
                     txtSigle.setText(sigle);
+                    txtAdr_rue.setText(adr_rue);
                     txtAdr_ville.setText(adr_ville);
                     txtAdr_cp.setText(adr_cp);
                     txtEmailDirecteur.setText(emailDirecteur);
-                    txtEmailEntraineur.setText(emailEntraineur);
-                    txtEmailJoueur.setText(emailJoueur);
                     txtNomDirecteur.setText(nomDirecteur);
                     txtPrenomDirecteur.setText(prenomDirecteur);
-
 
                 }
             });
