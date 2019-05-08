@@ -168,7 +168,7 @@ public class MatchsActivity extends ListActivity {
             }
 
             if (json != null) {
-                Toast.makeText(MatchsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
+                // Toast.makeText(MatchsActivity.this, json.toString(), Toast.LENGTH_LONG).show();  // TEST/DEBUG
                 try {
                     success = json.getInt(TAG_SUCCESS);
                     message = json.getString(TAG_MESSAGE);
